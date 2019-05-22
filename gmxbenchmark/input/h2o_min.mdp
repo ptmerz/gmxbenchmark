@@ -1,0 +1,6 @@
+integrator               = steep
+nsteps                   = 10000
+coulombtype              = Reaction-Field
+epsilon-rf               = 0
+gen-vel                  = yes
+gen-temp                 = 300

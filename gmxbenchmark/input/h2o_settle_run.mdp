@@ -1,0 +1,4 @@
+nsteps                   = 5000
+dt                       = 0.001
+coulombtype              = Reaction-Field
+epsilon-rf               = 0

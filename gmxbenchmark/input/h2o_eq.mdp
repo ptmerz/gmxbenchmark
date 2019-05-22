@@ -1,0 +1,10 @@
+nsteps                   = 1000000
+dt                       = 0.002
+coulombtype              = Reaction-Field
+epsilon-rf               = 0
+gen-vel                  = yes
+gen-temp                 = 300
+tcoupl                   = vrescale
+ref-t                    = 300
+tau-t                    = 0.2
+tc-grps                  = system
