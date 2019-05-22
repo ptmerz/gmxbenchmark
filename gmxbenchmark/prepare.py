@@ -680,7 +680,7 @@ def make_scripts(args):
     parser.add_argument('--gmxname', type=str, metavar='name', nargs='+',
                         help='Name the gmx executables defined with `--gmx`, used for output only.\n'
                              'If argument is not used, executables will simply be numbered.\n'
-                             'If argument is used, length must be equal to number of gmx excutables.')
+                             'If argument is used, length must be equal to number of gmx executables.')
     parser.add_argument('--system_name', type=str, metavar='system', default='h2o_settle',
                         help='The name of the system. Default: h2o_settle')
     parser.add_argument('--nreps', type=int, metavar='N', default=5,
