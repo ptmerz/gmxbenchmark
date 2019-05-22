@@ -3,9 +3,9 @@ GROMACS benchmark tool
 **********************
 
 This tool aims at evaluating performance of the GROMACS molecular
-simulation engine (www.gromacs.org). On a short term, this is mostly
+simulation engine (www.gromacs.org). In the short term, this is mostly
 thought to be a help for code development, in assessing how changes to
-the code influence its performance. On a longer term, this tool could
+the code influence its performance. In the longer term, this tool could
 evolve to also allow the evaluation of hardware and parallelization
 schemes based on more complex, possibly user-submitted systems.
 
@@ -260,7 +260,7 @@ Analysis
 ========
 Running the analysis script will create ``analysis.html`` which can be opened using any browser. An example
 of such a result file con be found
-`here <https://htmlpreview.github.io/?https://github.com/ptmerz/gmxbenchmark/blob/master/examples/analysis.html/>`_.
+`here <https://htmlpreview.github.io/?https://github.com/ptmerz/gmxbenchmark/blob/master/examples/analysis.html>`_.
 The file consists of a few different sections, namely
 
 * **Key:** Describes the executable, the benchmarking run arguments, and the system sizes used, and assigns
