@@ -49,7 +49,7 @@ Prepare scripts
 ---------------
 
 ``gmxbenchmark-prepare`` allows users to prepare equilibration, run, and analysis scripts according to
-their needs. It is ran directly from the command line.
+their needs. It is run directly from the command line.
 
 Command-line help
 ~~~~~~~~~~~~~~~~~
@@ -103,7 +103,7 @@ Command-line help
          --mdrun_args "\-pin on" --eq_args "\-nt 0"
 
      This compares two binaries, "original" and "modified", by increasing the box size of the h2o_settle
-     system up to 3-fold, in 9 steps. The equilibration is ran on all available threads (-nt 0).
+     system up to 3-fold, in 9 steps. The equilibration is run on all available threads (-nt 0).
      The benchmarking simulations are repeated with three sets of arguments, running the simulation on
      1 thread (-nt 1), 4 OMP threads (-nt 4 -ntomp 4) threads, and 4 MPI threads (-nt 4 -ntmpi 4),
      respectively. All of these use pinning.
@@ -194,14 +194,14 @@ Equilibration
 Equilibration is only performed if the ``--multiply`` option was chosen, as other systems are expected
 to be equilibrated. ``equilibrate.sh`` doesn't take any arguments, and will first create systems of
 different sizes (using ``gmx solvate``) and minimize them, before running a longer equilibration run.
-The results of these equilibration runs are found in the ``eq/`` folder. The equilibration is only ran
-with one executable (the first one given in the ``--gmx`` arguments). It does hence not need to be reran
-if new executables are added (see `Add executables`_ below), or if the benchmarking is re-ran after code
+The results of these equilibration runs are found in the ``eq/`` folder. The equilibration is only run
+with one executable (the first one given in the ``--gmx`` arguments). It does hence not need to be rerun
+if new executables are added (see `Add executables`_ below), or if the benchmarking is rerun after code
 changes.
 
 Benchmarking run
 ~~~~~~~~~~~~~~~~
-To benchmark the executables, the systems chosen are ran repeatedly with all executables to gather
+To benchmark the executables, the systems chosen are run repeatedly with all executables to gather
 data for later analysis. ``run.sh`` allows to specify which executable to run (``all`` or one or more
 executables by their names defined through ``--gmxname``). Running executables separately allows,
 for example, to re-run only a specific executable after recompiling it, or run only a newly added
@@ -218,7 +218,7 @@ To add an executable later on, one can run ``gmxbenchmark-prepare`` again with t
 first time, only adding the additional executable (and, if names were chosen, an additional name).
 ``add_executable.sh`` simplifies this process by only taking an executable and a name as input and rerunning
 ``gmxbenchmark-prepare`` with the previously chosen arguments. Note that since the equilibration, if needed,
-is only ran with one executable, it doesn't need to be reran upon addition of an executable. Also note that
+is only run with one executable, it doesn't need to be rerun upon addition of an executable. Also note that
 ``run.sh`` allows to run specific executables only, so it also isn't necessary to rerun benchmarking for all
 executables.
 
@@ -239,20 +239,20 @@ The following systems are currently available:
 
 Pure water box, 348 molecules, 1044 atoms, box size 2.2nm x 2.2nm x 2.2nm. The topology prescribes constraints
 using settle. Uses reaction field with ``epsilon-rf = 0``. The equilibration script uses thermostatting, while
-the benchmarking simulation is ran in NVE. Note: Changing the ensemble sampled can easily be done using the
+the benchmarking simulation is run in NVE. Note: Changing the ensemble sampled can easily be done using the
 ``--mdp`` option of ``gmxbenchmark-prepare``.
 
 ``h2o``
 ~~~~~~~
 Pure water box, 348 molecules, 1044 atoms, box size 2.2nm x 2.2nm x 2.2nm. The topology prescribes no
 constraints. Uses reaction field with ``epsilon-rf = 0``. The equilibration script uses thermostatting, while
-the benchmarking simulation is ran in NVE. Note: Changing the ensemble sampled can easily be done using the
+the benchmarking simulation is run in NVE. Note: Changing the ensemble sampled can easily be done using the
 ``--mdp`` option of ``gmxbenchmark-prepare``.
 
 Contributing new systems
 ~~~~~~~~~~~~~~~~~~~~~~~~
 New systems should come with an equilibrated starting structure, a topology file, a ``mdp``-parameter
-file for the benchmarking run, and a short description. If the system is suitable to be ran at different
+file for the benchmarking run, and a short description. If the system is suitable to be run at different
 sizes using the ``--multiply`` option, ``mdp``-parameter files for minimization and equilibration should
 be added.
 

@@ -1044,7 +1044,7 @@ def analyze(args: Sequence[str]) -> int:
         html_file.write(html_head('GROMACS benchmark'))
         html_file.write(html_header('GROMACS benchmark', 1))
         html_file.write(html_header('Key', 2))
-        html_file.write(html_paragraph('Each combination (executable - arguments - system size) was ran '
+        html_file.write(html_paragraph('Each combination (executable - arguments - system size) was run '
                                        '{:d} times to improve statistics.'.format(args.nreps)))
         col1 = list()
         col1.append(html_header('Executable', 3))

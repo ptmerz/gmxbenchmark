@@ -269,7 +269,7 @@ class Script:
             self, system_name: str, nreps: int, multiply: float, num_system_sizes: int,
             min_boxsize: np.ndarray(shape=(1, 3), dtype=float)) -> None:
         """
-        Set details about systems to be ran, namely
+        Set details about systems to be run, namely
           * the name of the system,
           * the number of repetitions for each benchmarking run (to improve statistics),
           * if the system size should be increased: by how much,
@@ -321,7 +321,7 @@ class Script:
             'function print_help() {',
             '    echo "USAGE: equilibrate.sh [-h | --help]"',
             '    echo ""',
-            '    echo "Run equilibration (needs to be ran only once)."',
+            '    echo "Run equilibration (needs to be run only once)."',
             '    echo ""',
             '    echo "ARGUMENTS:"',
             '    echo "  -h, --help            show help message and exit"',
@@ -361,7 +361,7 @@ class Script:
             '    echo "             $exestring"',
             '    echo ""',
             '    echo "Run benchmarking with one, several or all exectuables."',
-            '    echo "Requires equilibration to have ran previously."',
+            '    echo "Requires equilibration to have run previously."',
             '    echo ""',
             '    echo "ARGUMENTS:"',
             '    echo "  -h, --help            show help message and exit"',
@@ -418,7 +418,7 @@ class Script:
             'function print_help() {',
             '    echo "USAGE: analyze.sh [-h | --help]"',
             '    echo ""',
-            '    echo "Run analysis for all executables. All executables need to have ran previously."',
+            '    echo "Run analysis for all executables. All executables need to have run previously."',
             '    echo ""',
             '    echo "ARGUMENTS:"',
             '    echo "  -h, --help            show help message and exit"',
@@ -663,7 +663,7 @@ def make_scripts(args):
                '      --run_args "\\-nt 1" --run_args "\\-nt 4 -ntomp 4" --run_args "\\-nt 4 -ntmpi 4" \\\n'
                '      --mdrun_args "\\-pin on" --eq_args "\\-nt 0"\n\n'
                '  This compares two binaries, "original" and "modified", by increasing the box size of the h2o_settle\n'
-               '  system up to 3-fold, in 9 steps. The equilibration is ran on all available threads (-nt 0).\n'
+               '  system up to 3-fold, in 9 steps. The equilibration is run on all available threads (-nt 0).\n'
                '  The benchmarking simulations are repeated with three sets of arguments, running the simulation on \n'
                '  1 thread (-nt 1), 4 OMP threads (-nt 4 -ntomp 4) threads, and 4 MPI threads (-nt 4 -ntmpi 4),\n'
                '  respectively. All of these use pinning.',
